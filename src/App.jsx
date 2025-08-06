@@ -9,14 +9,14 @@ import Kalkulator from "./pages/Kalkulator";
 import Artikel from "./pages/Artikel";
 import DetailArtikel from "./pages/DetailArtikel";
 import TanyaJawab from "./pages/TanyaJawab";
-import ScrollToTop from "./components/ScrollToTop"; // <-- Komponen ini kita pertahankan
+import ScrollToTop from "./components/ScrollToTop";
 
-// Komponen AppLogic yang bermasalah sudah dihapus
+// 1. Import halaman baru Anda di sini
+import TentangKami from "./pages/TentangKami";
 
 function App() {
   return (
     <BrowserRouter>
-      {/* Fitur ini berfungsi dengan baik dan tidak mengganggu navigasi */}
       <ScrollToTop />
 
       <Routes>
@@ -28,6 +28,9 @@ function App() {
           <Route path="artikel" element={<Artikel />} />
           <Route path="artikel/:slug" element={<DetailArtikel />} />
           <Route path="tanya-jawab" element={<TanyaJawab />} />
+
+          {/* 2. Tambahkan rute baru di sini */}
+          <Route path="tentang-kami" element={<TentangKami />} />
         </Route>
       </Routes>
     </BrowserRouter>

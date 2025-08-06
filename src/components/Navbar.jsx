@@ -1,3 +1,4 @@
+// src/components/Navbar.jsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
@@ -5,30 +6,28 @@ import logo from "../assets/images/logo.png";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  // 1. Tambahkan link "Tentang Kami" ke dalam array navLinks
   const navLinks = [
     { name: "Beranda", href: "/" },
     { name: "Panduan per Minggu", href: "/panduan-mingguan" },
     { name: "Kalkulator", href: "/kalkulator" },
     { name: "Artikel", href: "/artikel" },
     { name: "Tanya Jawab", href: "/tanya-jawab" },
+    { name: "Tentang Kami", href: "/tentang-kami" }, // <-- Tambahkan ini
   ];
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
-      {/* Perubahan di sini: hapus max-w-7xl dan mx-auto */}
+      {/* ... sisa kode tidak perlu diubah ... */}
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            {/* 1. Ubah Link menjadi flex container */}
             <Link to="/" className="flex items-center">
-              {/* 2. Tambahkan gambar di sini */}
               <img
                 className="h-8 w-auto mr-2"
                 src={logo}
                 alt="TrimesterCare Logo"
               />
-
-              {/* 3. Teks nama website */}
               <span className="text-2xl font-bold text-pink-500">
                 TrimesterCare
               </span>
